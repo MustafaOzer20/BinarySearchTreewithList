@@ -1,4 +1,6 @@
 from function import *
+from traversal import *
+
 tree=[]
 while True:
     print("""
@@ -11,8 +13,10 @@ while True:
         6.Max Value
         7.Predessor
         8.Successor
-        9.Inorder
-        10.Exit
+        9.Postorder
+        10.Inorder
+        11.Preorder
+        12.Exit
 *************************************************
     """)
     try:
@@ -44,6 +48,18 @@ while True:
             data = int(input("Enter the value of successor : "))
             print(predessorAndsuccessor(data,tree,2))
         elif choice==9:
+            preorder(tree)
+            print("Preorder : ",list_preorder)
+            list_preorder.clear()
+        elif choice==10:
+            inorder(tree)
+            print("Inorder : ",list_inorder)
+            list_inorder.clear()
+        elif choice==11:
+            postorder(tree)
+            print("Postorder : ",list_postorder)
+            list_postorder.clear()
+        elif choice==12:
             print("Exit...")
             break
         else:
